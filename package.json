@@ -1,0 +1,19 @@
+{
+  "name": "log_reader_assignment",
+  "version": "1.0.0",
+  "description": "This will be log reader",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "log",
+    "reader",
+    "assignment"
+  ],
+  "author": "Kangkan Lahkar",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
