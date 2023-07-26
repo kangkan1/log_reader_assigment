@@ -46,8 +46,20 @@ for(let file in log_files){
       line_count++;
       if (regexPattern.test(line)) {
           for(let i in request_methods){
+            // 2023-04-04 15:42 +10:00: ::ffff:49.36.65.32 - - [04/Apr/2023:05:42:05 +0000] "GET /api//notification/1?rowsPerPage=10&page=0& HTTP/1.1" 200 12904 "-" "okhttp/4.9.1"
+            // must contains ':ffff' and 'HTTP/1.1
             if(line.includes(request_methods[i]) && line.includes(':ffff') && line.includes('HTTP/1.1')){
               valid++;
+              
+              let time =line.split('+') 
+              time = time[0]
+              time = time.trim()
+              // console.log(time)
+              if(first_time === 0){
+                first_time = new Date(time);
+              }else{
+                last_time = new Date(time);
+              }
              
               try{
                 // 2023-04-03 23:18 +10:00: ::ffff:49.36.88.202 - - [03/Apr/2023:13:18:49 +0000] "GET /master/job_templates_kHfMGI_1644343835794.png HTTP/1.1" 200 1247981 "-" "webapp/1 CFNetwork/1402.0.8 Darwin/22.3.0"
@@ -102,10 +114,17 @@ for(let file in log_files){
     rl.on('close', () => {
       
       console.log('Reading file completed for : '+log_files[file]);
-      printValue(method_map)
+      printValue(method_map, first_time, last_time)
       console.log()
       process.stdout.write("Do you want to display which endpoint is called how may times? Y/N ?")
       console.log()
+      // console.log("First time ", first_time);
+      // console.log("Last time ", last_time)
+      try{
+        
+      }catch(e){
+
+      }
       
       let shouldPrint = input.question()
       // if user input is 'Y' or  'y' display API endpoints along with count

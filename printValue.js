@@ -4,7 +4,7 @@ const status_code = require('./status_code');  // all possible http code and cod
  * it will be printed in table format
  */ 
 
-let printValue = function printValue(map){
+let printValue = function printValue(map, first_time=null, last_time=null){
 
   let len1 = 0, len2=0, len3=0;
   let sum = 0;
@@ -85,6 +85,15 @@ let printValue = function printValue(map){
   process.stdout.write('\n') 
   process.stdout.write('\n') 
   process.stdout.write('\x1b[33m Total Number of API Calls made \x1b[0m:'+sum) 
+
+  if(first_time && last_time){
+    let time_diff = last_time-first_time;
+    let min = time_diff / (1000*60);
+    process.stdout.write('\n') ;
+    process.stdout.write('\n') ;
+    process.stdout.write('\x1b[33m Avergage Number of API Calls made per minutes \x1b[0m:'+Math.floor(sum/min)) 
+  }
+  
       
 
 }

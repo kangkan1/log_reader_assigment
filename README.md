@@ -18,9 +18,10 @@
 
 ![alt text](https://github.com/kangkan1/log_reader_assigment/blob/master/static/images/result2.png?raw=true)
 
-# npm start
 
 
-# Please store all the log files in folder "log_files"
+
+# Please store all the log files in folder "log_files".
 # The programme will automatically read all the files
+# from the folder "log_files".
 
