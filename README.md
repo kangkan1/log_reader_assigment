@@ -24,3 +24,16 @@ npm start
   Type 'Y' or 'y' if you wanna display the result, or type anythin if you don't
   wanna display the result
 
+
+# Skip everything and just run the programme
+```
+npm install
+npm start
+```
+- That's it
+
+# How to read more log files
+- Add log files in the folder ```log_files```.
+- Run the command in the terminal ```npm start```.
+- The programme will automatically read all the files in the folder ```log_files```.
+- That's it
