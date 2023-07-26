@@ -1,13 +1,20 @@
 # log_reader
 
-## Installing the packages
+# Installing the packages
 
-# npm install
+## npm install
 
-## Running the project
+# Running the project
 
-# npm start
+## npm start
 
-## Images
+# Images
+
+## Displaying status count
 
 ![alt text](https://github.com/kangkan1/log_reader_assigment/blob/master/static/images/result1.png?raw=true)
+
+## Displaying Endpoint calls count. Type "Y" in terminal
+
+![alt text](https://github.com/kangkan1/log_reader_assigment/blob/master/static/images/result2.png?raw=true)
+
