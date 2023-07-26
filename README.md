@@ -31,9 +31,12 @@ npm install
 npm start
 ```
 - That's it
+- However if you don't have node installed in your system you 
+  to install it from [here](https://nodejs.org/en/download)
 
-# How to read more log files
+# How to read more log files ?
 - Add log files in the folder ```log_files```.
-- Run the command in the terminal ```npm start```.
+- Run the command in the terminal ```npm start```. (You need to install ```npm install```
+  if you haven't installed npm packages)
 - The programme will automatically read all the files in the folder ```log_files```.
 - That's it
