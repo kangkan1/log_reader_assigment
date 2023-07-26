@@ -86,12 +86,13 @@ let printValue = function printValue(map, first_time=null, last_time=null){
   process.stdout.write('\n') 
   process.stdout.write('\x1b[33m Total Number of API Calls made \x1b[0m:'+sum) 
 
+  // will calculate time difference 
   if(first_time && last_time){
     let time_diff = last_time-first_time;
     let min = time_diff / (1000*60);
     process.stdout.write('\n') ;
     process.stdout.write('\n') ;
-    process.stdout.write('\x1b[33m Avergage Number of API Calls made per minutes \x1b[0m:'+Math.floor(sum/min)) 
+    process.stdout.write('\x1b[33m Avergage Number of API Calls made per minutes \x1b[0m:'+Math.floor(sum/min)) ;
   }
   
       
